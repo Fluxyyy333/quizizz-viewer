@@ -1,17 +1,20 @@
 # Quizizz Answer Viewer — Bookmarklet
 
-## Cara Pakai
+## Cara Pakai (Android / Desktop)
 
-### Opsi 1: Console Browser
+### Bookmarklet (Recommended)
+1. Buat bookmark baru di browser (bookmark halaman apa saja dulu)
+2. Edit bookmark tersebut, ganti URL dengan:
+```
+javascript:void(fetch('https://cdn.jsdelivr.net/gh/Fluxyyy333/quizizz-viewer@master/bookmarklet.js').then(r=>r.text()).then(eval))
+```
+3. Buka quiz di quizizz.com
+4. Ketik nama bookmark di address bar → pilih bookmark tersebut
+
+### Console Browser (Desktop)
 1. Buka quiz di quizizz.com
 2. Tekan F12 → tab Console
 3. Paste seluruh isi `bookmarklet.js` → Enter
-
-### Opsi 2: Bookmark
-1. Buat bookmark baru di browser
-2. Isi nama: `Quizizz Viewer`
-3. Isi URL dengan isi file `bookmark-url.txt`
-4. Saat di halaman Quizizz, klik bookmark tersebut
 
 ## Cara Kerja
 - **Hook fetch & XHR** — menangkap response API Quizizz saat quiz dimuat
