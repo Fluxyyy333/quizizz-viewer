@@ -497,8 +497,9 @@
   // ==================== INIT ====================
 
   function init() {
-    if (!window.location.hostname.includes("quizizz.com")) {
-      alert("Buka Quizizz dulu sebelum menjalankan bookmarklet ini!");
+    const host = window.location.hostname;
+    if (!host.includes("quizizz.com") && !host.includes("wayground.com")) {
+      alert("Buka Wayground/Quizizz dulu sebelum menjalankan bookmarklet ini!");
       return;
     }
 
