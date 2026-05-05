@@ -6,7 +6,7 @@
 1. Buat bookmark baru di browser (bookmark halaman apa saja dulu)
 2. Edit bookmark tersebut, ganti URL dengan:
 ```
-javascript:void(fetch('https://cdn.jsdelivr.net/gh/Fluxyyy333/quizizz-viewer@master/bookmarklet.js').then(r=>r.text()).then(eval))
+javascript:(()=>{let s=document.createElement("script");s.src="https://cdn.jsdelivr.net/gh/Fluxyyy333/quizizz-viewer@master/bookmarklet.js?v="+Date.now();document.head.appendChild(s);})();
 ```
 3. Buka quiz di quizizz.com
 4. Ketik nama bookmark di address bar → pilih bookmark tersebut
